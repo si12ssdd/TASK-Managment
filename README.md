@@ -1,12 +1,81 @@
-# React + Vite
+# 🚀 Task Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern, role-based Task Management Application built with **React** and **Vite**.
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://task-managment-silk.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Overview
 
-## Expanding the ESLint configuration
+This application allows **Admins** to assign tasks and **Employees** to track their progress. It features a persistent state using **LocalStorage** to simulate a backend database and utilizes the **Context API** for global state management.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+### 🛡️ Admin Dashboard
+*   **Create Tasks**: Assign new tasks to specific employees with details like title, description, and due date.
+*   **Global Monitoring**: View a comprehensive list of all employees and their task statutes (New, Active, Completed, Failed).
+
+### 👤 Employee Dashboard
+*   **Personalized View**: Employees see only tasks assigned to them.
+*   **Task Tracking**: Visual stats for quick insights.
+*   **Interactive Task Management**: Mark tasks as "Completed" or "Failed" with persistent updates.
+
+## 🛠️ Tech Stack
+
+*   **Frontend Framework**: [React](https://react.dev/)
+*   **Build Tool**: [Vite](https://vitejs.dev/)
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+*   **State Management**: Context API
+*   **Data Persistence**: LocalStorage (Browser API)
+*   **Icons**: React Icons / Heroicons
+
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally on your machine.
+
+### Prerequisites
+
+Make sure you have **Node.js** installed on your system.
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/your-username/taskmanagement.git
+    cd taskmanagement
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in your browser**
+    The application will start at `http://localhost:5173`.
+
+## 📂 Project Structure
+
+```text
+src/
+├── context/
+│   └── AuthProvider.jsx   # Global State Store (Context + localStorage logic)
+├── components/
+│   ├── Auth/              # Login Component
+│   ├── Dashboard/         # Admin & Employee Dashboard Views
+│   └── other/             # Task Forms, Lists, and Stats Components
+├── utils/
+│   └── localStorage.jsx   # Mock Data & Persistence Helpers
+└── App.jsx                # Main Application Logic
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+**Created by [Siddharth]**
